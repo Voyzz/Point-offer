@@ -15,8 +15,13 @@ function print(x){
 var getInfo = function(x) {
 	var num = x.split(" ");
 	var num1 = num[0],num2 = num[1];
-	var set1 = read_line().split(" ");
-	var set2 = read_line().split(" ");
+	var set1 = [],set2=[];
+	for (var i = 0; i < num1; i++) {
+		set1.push(readInt());
+	}
+	for (var i = 0; i < num2; i++) {
+		set2.push(readInt());
+	}
 	var res = unionSet(set1,set2);
 	print(res.join(" "));
 }
